@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "51965000115";
+const WHATSAPP_NUMBER = "51929803321";
 
 function waLink(message) {
   const encoded = encodeURIComponent(message);
