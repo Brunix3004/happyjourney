@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Happy Journey | Pasajes y Alojamiento</title>
   <link rel="stylesheet" href="/CSS/estilos.css">
+  <title>Happy Journey | Pasajes y Alojamiento</title>
 
 </head>
 
@@ -13,7 +13,7 @@
     <div class="container">
       <div class="nav">
         <div class="brand">
-          <img src="/IMAGENES/logo.png" alt="Logo Happy Journey" loading="lazy">
+          <img src="/IMAGENES/logo.png" alt="Logo Happy Journey">
           <div class="title">
             Happy Journey
             <small>Viajar nunca fue tan fácil</small>
@@ -22,25 +22,30 @@
 
         <nav class="navlinks">
           <a href="#servicios">Servicios</a>
+          <a href="#habitaciones">Habitaciones</a>
           <a href="#cotizar">Cotizar</a>
-          <a href="#faq">FAQ</a>
+          <a href="#legal">Legal</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
-        <a class="btn primary small" id="btn-wsp-top" href="#" aria-label="Cotizar por WhatsApp">💬 Cotizar</a>
+        <a class="btn primary small" id="btn-wsp-top" href="#">💬 Cotizar</a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-card">
             <div class="inner">
-              <div class="kicker">✈️ + 🏨 Pasajes & Alojamiento</div>
-              <h1>Planifica tu viaje con calma.<br>Nosotros lo hacemos fácil.</h1>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span class="chip teal">✈️ Pasajes</span>
+                <span class="chip violet">🏨 Alojamiento</span>
+                <span class="chip peach">💬 Reservas por WhatsApp</span>
+              </div>
+
+              <h1>Planea tu viaje sin estrés.<br>Nosotros lo hacemos fácil.</h1>
               <p class="sub">
                 En <b>Happy Journey</b> te ayudamos a cotizar y reservar <b>pasajes aéreos</b> y
                 <b>servicios de alojamiento</b>. Todo por <b>WhatsApp</b>, rápido y claro.
@@ -48,7 +53,7 @@
 
               <div class="hero-actions">
                 <a class="btn whatsapp" id="btn-wsp-hero" href="#">🟢 Cotizar por WhatsApp</a>
-                <a class="btn" href="#cotizar">📩 Quiero más info</a>
+                <a class="btn" href="#habitaciones">🛏️ Ver habitaciones</a>
               </div>
 
               <p class="hint">*Te respondemos con opciones y precios según tu fecha y destino.</p>
@@ -57,45 +62,44 @@
 
           <div class="hero-side hero-card">
             <div class="mini">
-              <div class="dot">🧾</div>
+              <div class="dot">📍</div>
               <div>
-                <b>Cotización en minutos</b>
-                <p>Envíanos destino, fechas y cantidad de personas por WhatsApp.</p>
+                <b>Dirección</b>
+                <p>Villa los frutales pampachica Mz c lote 6, Dpto. Loreto, Prov. Maynas, Dist. San Juan Bautista.</p>
               </div>
             </div>
             <div class="mini">
-              <div class="dot">🔎</div>
+              <div class="dot">🧾</div>
               <div>
-                <b>Opciones claras</b>
-                <p>Te mandamos alternativas con precios y recomendaciones.</p>
+                <b>Cotización en minutos</b>
+                <p>Envía destino, fechas y personas por WhatsApp.</p>
               </div>
             </div>
             <div class="mini">
               <div class="dot">✅</div>
               <div>
-                <b>Reserva segura</b>
-                <p>Confirmas por WhatsApp y coordinamos el proceso paso a paso.</p>
+                <b>Reserva paso a paso</b>
+                <p>Confirmas por WhatsApp y coordinamos contigo.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- SERVICIOS -->
+    
     <section id="servicios">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>Servicios</h2>
-            <p>Elige lo que necesitas. Puedes pedir uno solo o armar el paquete completo.</p>
+            <p>Elige lo que necesitas.</p>
           </div>
         </div>
 
         <div class="grid-3">
           <div class="card">
             <div class="tag">✈️ Pasajes aéreos</div>
-            <h3>Vuelos nacionales</h3>
+            <h3>Vuelos nacionales e internacionales</h3>
             <p class="muted">Buscamos rutas, horarios y precios según tu presupuesto.</p>
             <ul class="list">
               <li>Ida / ida y vuelta</li>
@@ -108,7 +112,7 @@
           </div>
 
           <div class="card">
-            <div class="tag" style="background: rgba(205,187,255,.35); color:#3a2a78;">🏨 Alojamiento</div>
+            <div class="tag violet">🏨 Alojamiento</div>
             <h3>Hoteles, hostales y departamentos</h3>
             <p class="muted">Te enviamos opciones con ubicación, precios y lo que incluye.</p>
             <ul class="list">
@@ -119,35 +123,22 @@
             <div style="margin-top:12px">
               <a class="btn small whatsapp btn-service" data-service="Alojamiento" href="#">Cotizar 🏨</a>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="tag">🌈 Paquete</div>
-            <h3>Vuelo + alojamiento</h3>
-            <p class="muted">Ideal si quieres una opción completa y organizada.</p>
-            <ul class="list">
-              <li>Ahorra tiempo comparando</li>
-              <li>Todo coordinado por WhatsApp</li>
-              <li>Recomendaciones según tu plan</li>
-            </ul>
-            <div style="margin-top:12px">
-              <a class="btn small whatsapp btn-service" data-service="Paquete vuelo + alojamiento" href="#">Cotizar 🌈</a>
-            </div>
-          </div>
+          </div>      
         </div>
       </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
-    <section>
+    <!-- HABITACIONES (Airbnb-like) -->
+    <section id="habitaciones">
       <div class="container">
-        <div class="quote">
+        <div class="section-head">
           <div>
-            <b>¿Cómo funciona?</b>
-            <span>1) Pides info por WhatsApp · 2) Te enviamos opciones · 3) Confirmas y reservas</span>
+            <h2>Habitaciones disponibles</h2>
+            <p>Como estilo Airbnb: una portada por habitación. Dale clic para ver más fotos y detalles.</p>
           </div>
-          <a class="btn primary" id="btn-wsp-how" href="#">Empezar ahora</a>
         </div>
+
+        <div class="rooms-grid" id="roomsGrid"></div>
       </div>
     </section>
 
@@ -161,7 +152,7 @@
           </div>
         </div>
 
-        <div class="features">
+        <div class="grid-3" style="grid-template-columns: 1.2fr .8fr; gap:14px;">
           <div class="card">
             <h3>Formulario rápido</h3>
 
@@ -224,55 +215,94 @@
           </div>
 
           <div class="card">
-            <h3>Lo que te pediremos por WhatsApp</h3>
-            <p class="muted">Con esto te mandamos opciones buenas y rápidas:</p>
+            <h3>Datos de la agencia</h3>
+            <p class="muted"><b>Dirección:</b><br>
+              Villa los frutales pampachica Mz c lote 6, Departamento Loreto, Provincia Maynas, Distrito San Juan Bautista.
+            </p>
+            <p class="muted"><b>Atención:</b> Online (WhatsApp)</p>
+
+            <div class="divider"></div>
+
+            <div class="tag">✅ Transparencia</div>
             <ul class="list">
-              <li>Destino y fechas</li>
-              <li>Cantidad de personas</li>
-              <li>Preferencias (horarios, zona, tipo de hotel, etc.)</li>
-              <li>Presupuesto (si deseas)</li>
+              <li>Contacto visible</li>
+              <li>Política de datos</li>
+              <li>Términos y condiciones</li>
+              <li>Versión digital (punto 8)</li>
             </ul>
 
-            <div style="margin-top:14px">
-              <div class="tag">💡 Tip</div>
-              <p class="muted" style="margin-top:10px">
-                Mientras más claro el plan (fechas + destino), más rápido te mandamos alternativas.
-              </p>
-            </div>
-
-            <div style="margin-top:14px">
-              <a class="btn primary" href="#contacto">Ver contacto</a>
+            <div style="margin-top:12px">
+              <a class="btn primary" href="#legal">Ver secciones legales</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
+    <!-- LEGAL -->
+    <section id="legal">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Preguntas frecuentes</h2>
-            <p>Respuestas rápidas para que reserves con confianza.</p>
+            <h2>Legal y transparencia</h2>
+            <p>Secciones solicitadas: Política y protección de datos, Términos y condiciones, y versión digital (punto 8).</p>
           </div>
         </div>
 
-        <div class="grid-3">
-          <details>
-            <summary>¿Cuánto demoran en responder?</summary>
-            <p>Normalmente respondemos rápido por WhatsApp. Si es hora punta, te respondemos apenas esté disponible un asesor.</p>
-          </details>
+        <div class="legal-grid">
+          <div class="card legal-card" id="privacy">
+            <div class="tag violet">🔒 Política de protección de datos personales</div>
+            <h3>Política de Datos Personales</h3>
+            <p class="muted">
+              Happy Journey utiliza los datos brindados por el usuario (por ejemplo: nombre, teléfono, destino, fechas y preferencias)
+              únicamente para gestionar <b>cotizaciones, reservas</b> y atención al cliente por WhatsApp u otros canales que el usuario solicite.
+            </p>
+            <ul class="list">
+              <li><b>Finalidad:</b> cotización, reserva y comunicación.</li>
+              <li><b>Conservación:</b> el tiempo necesario para atender tu solicitud y obligaciones legales aplicables.</li>
+              <li><b>Seguridad:</b> medidas razonables para proteger la información.</li>
+              <li><b>Derechos:</b> puedes solicitar actualización, rectificación o eliminación escribiéndonos por WhatsApp.</li>
+            </ul>
+            <p class="hint">*Puedes adaptar este texto según tu RUC/razón social cuando lo tengas.</p>
+          </div>
 
-          <details>
-            <summary>¿Puedo cotizar solo alojamiento?</summary>
-            <p>Sí, puedes cotizar alojamiento sin problema. También hacemos paquete (vuelo + hotel) si prefieres.</p>
-          </details>
+          <div class="card legal-card" id="terms">
+            <div class="tag">📄 Términos y condiciones</div>
+            <h3>Términos & Condiciones</h3>
+            <p class="muted">
+              Al solicitar una cotización o reservar con Happy Journey, aceptas que:
+            </p>
+            <ul class="list">
+              <li>Las tarifas pueden variar según disponibilidad de aerolíneas/hospedajes.</li>
+              <li>Las reservas se confirman una vez validado pago y disponibilidad.</li>
+              <li>Políticas de cancelación/reembolso dependen del proveedor (aerolínea/hotel) y se informan antes de confirmar.</li>
+              <li>El cliente debe revisar datos (nombres, fechas, destinos) antes de confirmar.</li>
+            </ul>
+          </div>
 
-          <details>
-            <summary>¿Qué datos mínimos debo enviar?</summary>
-            <p>Destino, fechas y número de personas. Con eso te mandamos opciones.</p>
-          </details>
+          <div class="card legal-card">
+            <div class="tag peach">📌 Versión digital (Punto 8)</div>
+            <h3>Afiche / documento informativo (versión digital)</h3>
+            <p class="muted">
+              Aquí debe ir la <b>versión digital</b> del afiche o documento requerido por normativa (punto 8).
+              Puedes subirlo como imagen o PDF y enlazarlo aquí.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+              <a class="btn small" id="aficheLink" href="#" target="_blank" rel="noopener noreferrer">📥 Ver / Descargar afiche</a>
+              <button class="btn small" id="openAficheModal">🖼️ Ver en pantalla</button>
+            </div>
+            <p class="hint">*Reemplaza el link por tu archivo real (PDF o imagen).</p>
+          </div>
+
+          <div class="card legal-card">
+            <div class="tag">📍 Dirección</div>
+            <h3>Dirección de la agencia</h3>
+            <p class="muted">
+              Villa los frutales pampachica Mz c lote 6,<br>
+              Departamento Loreto, Provincia Maynas,<br>
+              Distrito San Juan Bautista.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -284,18 +314,18 @@
           <div class="section-head" style="margin-bottom:10px">
             <div>
               <h2>Contacto</h2>
-              <p>Todo se coordina por WhatsApp (cotización y reservas).</p>
+              <p>Cotizaciones y reservas por WhatsApp.</p>
             </div>
           </div>
 
           <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center">
-            <span class="pill">📍 Atención: Online</span>
-            <span class="pill">🕒 Horario: 9:00 a.m. – 7:00 p.m.</span>
+            <span class="pill">📍 Villa los frutales pampachica Mz c lote 6, Loreto – Maynas – San Juan Bautista</span>
+            <span class="pill">🕒 9:00 a.m. – 7:00 p.m.</span>
             <a class="btn whatsapp" id="btn-wsp-contact" href="#">🟢 Escribir por WhatsApp</a>
           </div>
 
           <p class="hint" style="margin-top:10px">
-            *Puedes personalizar el horario, ubicación, y redes sociales si deseas.
+            *Por determinar.
           </p>
         </div>
       </div>
@@ -307,33 +337,76 @@
       <div class="foot">
         <div>
           <div class="brand" style="padding:0; margin-bottom:10px">
-            <img src="/IMAGENES/logo.png" alt="Logo Happy Journey" loading="lazy">
+            <img src="/IMAGENES/logo.png" alt="Logo Happy Journey">
             <div class="title">
               Happy Journey
               <small>Viajar nunca fue tan fácil</small>
             </div>
           </div>
           <small>
-            Venta de pasajes aéreos y servicios de alojamiento. Cotizaciones y reservas 100% por WhatsApp.
+            <b>Dirección:</b> Villa los frutales pampachica Mz c lote 6, Dpto. Loreto, Prov. Maynas, Dist. San Juan Bautista.
+            <br>© <span id="year"></span> Happy Journey — Cotizaciones y reservas por WhatsApp.
           </small>
         </div>
 
         <div>
-          <small><b>Accesos</b></small>
+          <small><b>Legal</b></small>
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-            <a class="btn small" href="#servicios">Servicios</a>
-            <a class="btn small" href="#cotizar">Cotizar</a>
-            <a class="btn small" href="#faq">FAQ</a>
-          </div>
-
-          <div style="margin-top:14px">
-            <small class="muted">© <span id="year"></span> Happy Journey</small>
+            <a class="btn small" href="#privacy">Política de datos</a>
+            <a class="btn small" href="#terms">Términos</a>
+            <a class="btn small" href="#legal">Versión digital</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  
+  <div class="modal-backdrop" id="roomModalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-top">
+        <b id="modalTitle">Habitación</b>
+        <button class="close" id="modalClose">✕ Cerrar</button>
+      </div>
 
+      <div class="modal-content">
+        <div class="gallery">
+          <img id="modalMainImg" class="gallery-main" src="" alt="Imagen habitación">
+          <div class="thumbs" id="modalThumbs"></div>
+        </div>
+
+        <div class="modal-side">
+          <h3 id="modalName">Nombre</h3>
+          <div class="chip peach" id="modalPrice">💸 S/ -- por noche</div>
+          <p class="muted" id="modalDesc"></p>
+
+          <div class="divider"></div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;" id="modalBadges"></div>
+
+          <ul class="bullets" id="modalBullets"></ul>
+
+          <div class="divider"></div>
+
+          <a class="btn whatsapp" id="modalWspBtn" href="#">🟢 Consultar por WhatsApp</a>
+          <p class="hint" style="margin-top:8px">*Se enviará un mensaje con el nombre de la habitación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="modal-backdrop" id="aficheModalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-top">
+        <b>Versión digital (Punto 8)</b>
+        <button class="close" id="aficheClose">✕ Cerrar</button>
+      </div>
+      <div style="padding:14px;">
+        <img id="aficheImg" src="" alt="Afiche" style="width:100%; max-height:70vh; object-fit:contain; border-radius:18px; border:1px solid rgba(16,42,67,.10); background: rgba(255,255,255,.7);" />
+        <p class="hint" style="margin-top:10px">*Si tu afiche es PDF, conviene dejar solo el botón “Descargar”.</p>
+      </div>
+    </div>
+  </div>
+  
   <script src="/JS/app.js"></script>
 </body>
 </html>
