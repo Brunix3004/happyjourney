@@ -175,7 +175,7 @@ rooms.forEach((r, idx) => {
   const card = document.createElement("article");
   card.className = "card room-card";
   card.innerHTML = `
-        <img class="room-cover" src="${r.cover}" alt="${r.name}">
+        <img class="room-cover" src="${r.cover}" alt="${r.name}" loading="lazy"/>
         <div class="room-body">
           <div class="tag violet">🛏️ Habitación</div>
           <div class="room-title">${r.name}</div>
