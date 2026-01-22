@@ -1,6 +1,6 @@
 const WHATSAPP_NUMBER = "51929803321";
 
-const aficheESNNA = "/IMAGENES/afiche-punto8.png";
+// const aficheESNNA = "/IMAGENES/afiche-punto8.png";
 
 const rooms = [
   // 1 mini departamento amoblado con aire acondicionado
@@ -283,14 +283,38 @@ document.addEventListener("keydown", (e) => {
 // ========= Afiche (Punto 8) =========
 const aficheLink = document.getElementById("aficheLink");
 const aficheModalBackdrop = document.getElementById("aficheModalBackdrop");
-const aficheImg = document.getElementById("aficheImg");
+const aficheFrame = document.getElementById("aficheFrame");
 const openAficheModal = document.getElementById("openAficheModal");
 const aficheClose = document.getElementById("aficheClose");
 
-aficheLink.href = aficheESNNA;
+function driveToPreview(url) {
+  try {
+    const m = url.match(/\/file\/d\/([^/]+)\//);
+    if (m && m[1]) return `https://drive.google.com/file/d/${m[1]}/preview`;
 
-openAficheModal.addEventListener("click", () => {
-  aficheImg.src = aficheESNNA;
+    const u = new URL(url);
+    const id = u.searchParams.get("id");
+    if (id) return `https://drive.google.com/file/d/${id}/preview`;
+
+    const ucId = u.searchParams.get("id");
+    if (u.pathname.includes("/uc") && ucId) return `https://drive.google.com/file/d/${ucId}/preview`;
+
+    return url;
+  } catch {
+    return url;
+  }
+}
+
+openAficheModal.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const href = aficheLink.getAttribute("href");
+  if (!href) return;
+
+  const previewUrl = driveToPreview(href);
+
+  aficheFrame.src = previewUrl;
+
   aficheModalBackdrop.style.display = "flex";
   document.body.style.overflow = "hidden";
 });
@@ -298,9 +322,16 @@ openAficheModal.addEventListener("click", () => {
 function closeAfiche() {
   aficheModalBackdrop.style.display = "none";
   document.body.style.overflow = "auto";
+
+  aficheFrame.src = "";
 }
 
 aficheClose.addEventListener("click", closeAfiche);
 aficheModalBackdrop.addEventListener("click", (e) => {
   if (e.target === aficheModalBackdrop) closeAfiche();
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && aficheModalBackdrop.style.display === "flex") closeAfiche();
+});
+
